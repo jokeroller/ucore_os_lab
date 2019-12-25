@@ -1,0 +1,3 @@
+#日志
+今天创建了一个远程仓库准备利用远程仓库吧windows和ubuntu上的代码同步
+毕竟环境在ubuntu上，而ubuntu桌面实在是难用，这样就可以在windows上阅读和修改代码，然后在ubuntu上跑了。
