@@ -77,3 +77,4 @@ dd if=bin/kernel of=bin/ucore.img seek=1 conv=notrunc
 记录了154+1 的读入
 记录了154+1 的写出
 78916 bytes (79 kB, 77 KiB) copied, 0.000416177 s, 190 MB/s
+
