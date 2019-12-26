@@ -1,0 +1,54 @@
++ cc kern/init/init.c
+kern/init/init.c:95:1: warning: ‘lab1_switch_test’ defined but not used [-Wunused-function]
+   95 | lab1_switch_test(void) {
+      | ^~~~~~~~~~~~~~~~
++ cc kern/libs/stdio.c
++ cc kern/libs/readline.c
++ cc kern/debug/panic.c
+kern/debug/panic.c: In function ‘__panic’:
+kern/debug/panic.c:27:5: warning: implicit declaration of function ‘print_stackframe’; did you mean ‘print_trapframe’? [-Wimplicit-function-declaration]
+   27 |     print_stackframe();
+      |     ^~~~~~~~~~~~~~~~
+      |     print_trapframe
++ cc kern/debug/kdebug.c
+kern/debug/kdebug.c:251:1: warning: ‘read_eip’ defined but not used [-Wunused-function]
+  251 | read_eip(void) {
+      | ^~~~~~~~
++ cc kern/debug/kmonitor.c
++ cc kern/driver/clock.c
++ cc kern/driver/console.c
++ cc kern/driver/picirq.c
++ cc kern/driver/intr.c
++ cc kern/trap/trap.c
+kern/trap/trap.c: In function ‘print_trapframe’:
+kern/trap/trap.c:100:16: warning: taking address of packed member of ‘struct trapframe’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+  100 |     print_regs(&tf->tf_regs);
+      |                ^~~~~~~~~~~~
+At top level:
+kern/trap/trap.c:30:26: warning: ‘idt_pd’ defined but not used [-Wunused-variable]
+   30 | static struct pseudodesc idt_pd = {
+      |                          ^~~~~~
+kern/trap/trap.c:14:13: warning: ‘print_ticks’ defined but not used [-Wunused-function]
+   14 | static void print_ticks() {
+      |             ^~~~~~~~~~~
++ cc kern/trap/vectors.S
++ cc kern/trap/trapentry.S
++ cc kern/mm/pmm.c
++ cc libs/string.c
++ cc libs/printfmt.c
++ ld bin/kernel
++ cc boot/bootasm.S
++ cc boot/bootmain.c
++ cc tools/sign.c
++ ld bin/bootblock
+'obj/bootblock.out' size: 496 bytes
+build 512 bytes boot sector: 'bin/bootblock' success!
+记录了10000+0 的读入
+记录了10000+0 的写出
+5120000 bytes (5.1 MB, 4.9 MiB) copied, 0.0202535 s, 253 MB/s
+记录了1+0 的读入
+记录了1+0 的写出
+512 bytes copied, 9.8265e-05 s, 5.2 MB/s
+记录了154+1 的读入
+记录了154+1 的写出
+78916 bytes (79 kB, 77 KiB) copied, 0.00026673 s, 296 MB/s
